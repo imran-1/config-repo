@@ -1,14 +1,10 @@
-global:
-  message: welcome to order service environment !!
-server:
-  port: 8082
-message: This from enviroment !!
 spring:
+  application:
+    name: order-service
   datasource:
     url: jdbc:mysql://localhost:3306/order_master
-    username: root
-    password: 
-jpa:
-  hibernate:
-    ddl-auto: update
-  show-sql: false
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
